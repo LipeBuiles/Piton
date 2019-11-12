@@ -50,17 +50,17 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
-[Unit1]
+[Unit2]
 FileName=Piton.c
-CompileCpp=0
 Folder=
 Compile=1
 Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=0
 
-[Unit2]
+[Unit1]
 FileName=Piton.l
 Folder=
 Compile=0
