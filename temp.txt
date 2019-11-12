@@ -1,0 +1,7 @@
+Es un delimitador de programa {
+Es un delimitador de programa }
+Es un delimitador de programa [
+Es un delimitador de programa [
+Es un delimitador de programa ]
+Es un delimitador de programa ]
+Un identificador: JUAN_DK46

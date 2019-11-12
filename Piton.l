@@ -53,7 +53,7 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 "#" { fprintf(yyout, "Un comentario : %s\n", yytext ); }
 
-"("|")"|"["|"]"|"{"|","|":"|"."|"`"|"="|";"|"+="|"-="|"*="|"/="|"//="|"%="|"&="|"^="|">>="|"<<="|"**="   { fprintf(yyout, "Es un delimitador de programa %s\n", yytext ); }
+"("|")"|"["|"]"|"{"|"}"|","|":"|"."|"`"|"="|";"|"+="|"-="|"*="|"/="|"//="|"%="|"&="|"^="|">>="|"<<="|"**="   { fprintf(yyout, "Es un delimitador de programa %s\n", yytext ); }
 
 ";" { fprintf(yyout, "Un separador : %s\n", yytext ); }
 
@@ -69,11 +69,21 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 %%
 
-main( )
-    {
-    printf("Analizador para algunos elementos de un lenguaje al estilo de Piton en castellano\n\n");
-    yyin = fopen( "prog.pas", "r" );
-    yylex();
-    printf("Presiones una tecla para terminar...");
-    getchar();
- }
+int main (int argc, char **argv[]){
+  
+  yyout = fopen("temp.txt", "w");
+ 
+  if (argc == 1) { 
+     printf(" Analizador para algunos elementos de un lenguaje al estilo de Piton en Castellano\n");
+     yylex();
+     printf ("Lineas analizadas %d, Errores encontrados %d\n", yylineno, contError);
+   }
+  if (argc >= 2) {  
+     yyin = fopen( argv[1], "r" );   //Para abrir archivo con el codigo a analizar
+     yylex();
+     fprintf (yyout, "Lineas analizadas %d, Errores encontrados %d\n", yylineno, contError);
+     yyin = fclose(yyin);        //Cerrer el archivo con el codigo a analizar
+   }
+   
+  yyout = fclose(yyout); //Cerrer el archivo de salida de resultados
+}

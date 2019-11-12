@@ -472,7 +472,7 @@ static yyconst short int yy_nxt[369] =
        29,   30,   31,   32,   33,   34,   27,   35,   36,   37,
        11,   11,   38,    4,   11,   39,   40,   41,   42,   43,
        27,   44,   45,   27,   46,   47,   27,   27,   27,   48,
-       27,   49,    4,   50,   50,   50,   50,   50,   50,   53,
+       27,   49,   11,   50,   50,   50,   50,   50,   50,   53,
        82,   55,   56,   61,   54,   52,   58,   57,  225,   52,
        55,   83,   52,   59,   51,   51,   60,   65,   67,   66,
        71,   72,   68,   73,   80,   74,   81,   88,   90,   91,
@@ -821,117 +821,117 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 18 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un entero: %s (%d)\n", yytext, atoi( yytext ) );}
+{ fprintf(yyout,  "Un entero: %s (%d)\n", yytext, atoi( yytext ) );}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 20 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Un real: %s (%g)\n", yytext, atof( yytext ) );}
+{  fprintf(yyout, "Un real: %s (%g)\n", yytext, atof( yytext ) );}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 22 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para inicio : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para inicio : %s\n", yytext );}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 24 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para  fin de programa : %s\n", yytext ); return 0;}
+{  fprintf(yyout, "Una palabra reservada para  fin de programa : %s\n", yytext ); return 0;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 26 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Entero : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Entero : %s\n", yytext );}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 28 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Cadena : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Cadena : %s\n", yytext );}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 30 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Booleano : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Booleano : %s\n", yytext );}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 32 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Lista : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Lista : %s\n", yytext );}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 34 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Tupla : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Tupla : %s\n", yytext );}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 36 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para definir tipo variable Lista : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para definir tipo variable Lista : %s\n", yytext );}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 38 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada de entrada : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada de entrada : %s\n", yytext );}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 40 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada de salida : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada de salida : %s\n", yytext );}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 42 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para de decisión o condicionales : %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para de decisión o condicionales : %s\n", yytext );}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 44 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf( "Una palabra reservada para ciclos: %s\n", yytext );}
+{  fprintf(yyout, "Una palabra reservada para ciclos: %s\n", yytext );}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 46 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un operador logico: %s\n", yytext ); }
+{ fprintf(yyout, "Un operador logico: %s\n", yytext ); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 48 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un identificador: %s\n", yytext ); }
+{ fprintf(yyout, "Un identificador: %s\n", yytext ); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 50 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un operador : %s\n", yytext ); }
+{ fprintf(yyout, "Un operador : %s\n", yytext ); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 52 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Una asignacion : %s\n", yytext ); }
+{ fprintf(yyout, "Una asignacion : %s\n", yytext ); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 54 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un comentario : %s\n", yytext ); }
+{ fprintf(yyout, "Un comentario : %s\n", yytext ); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 56 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Es un delimitador de programa %s\n", yytext ); }
+{ fprintf(yyout, "Es un delimitador de programa %s\n", yytext ); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
 #line 58 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Un separador : %s\n", yytext ); }
+{ fprintf(yyout, "Un separador : %s\n", yytext ); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 60 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Inicia un comentario : %s\n", yytext ); }
+{ fprintf(yyout, "Inicia un comentario : %s\n", yytext ); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 62 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Termina un comentario : %s\n", yytext ); }
+{ fprintf(yyout, "Termina un comentario : %s\n", yytext ); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
@@ -946,7 +946,7 @@ YY_RULE_SETUP
 case 26:
 YY_RULE_SETUP
 #line 68 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf( "Caracter no reconocido: %s\n", yytext ); }
+{ fprintf(yyout,  "Caracter no reconocido: %s\n", yytext ); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
@@ -1840,11 +1840,21 @@ int main()
 #line 70 "C:\\Projects\\Piton\\Piton.l"
 
 
-main( )
-    {
-    printf("Analizador para algunos elementos de un lenguaje al estilo de Piton en castellano\n\n");
-    yyin = fopen( "prog.pas", "r" );
-    yylex();
-    printf("Presiones una tecla para terminar...");
-    getchar();
- }
+int main (int argc, char **argv[]){
+  
+  yyout = fopen("temp.txt", "w");
+ 
+  if (argc == 1) { 
+     printf(" Analizador para algunos elementos de un lenguaje al estilo de Piton en Castellano\n");
+     yylex();
+     printf ("Lineas analizadas %d, Errores encontrados %d\n", yylineno, contError);
+   }
+  if (argc >= 2) {  
+     yyin = fopen( argv[1], "r" );   //Para abrir archivo con el codigo a analizar
+     yylex();
+     fprintf (yyout, "Lineas analizadas %d, Errores encontrados %d\n", yylineno, contError);
+     yyin = fclose(yyin);        //Cerrer el archivo con el codigo a analizar
+   }
+   
+  yyout = fclose(yyout); //Cerrer el archivo de salida de resultados
+}
