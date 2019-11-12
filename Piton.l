@@ -15,9 +15,9 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 %%
 
--?{DIGITO}+   { fprintf(yyout,  "Un entero: %s (%d)\n", yytext, atoi( yytext ) );}
+-?{DIGITO}+   { fprintf(yyout,  "Un entero: %s \n", yytext, atoi( yytext ) );}
 
--?{DIGITO}+","{DIGITO}*      {  fprintf(yyout, "Un real: %s (%g)\n", yytext, atof( yytext ) );}
+-?{DIGITO}+","{DIGITO}*      {  fprintf(yyout, "Un real: %s \n", yytext, atof( yytext ) );}
 
 "Iniciar"|"iniciar"      {  fprintf(yyout, "Una palabra reservada para inicio : %s\n", yytext );}
 

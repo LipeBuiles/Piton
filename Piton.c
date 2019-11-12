@@ -821,12 +821,12 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 18 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf(yyout,  "Un entero: %s (%d)\n", yytext, atoi( yytext ) );}
+{ fprintf(yyout,  "Un entero: %s \n", yytext, atoi( yytext ) );}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 20 "C:\\Projects\\Piton\\Piton.l"
-{  fprintf(yyout, "Un real: %s (%g)\n", yytext, atof( yytext ) );}
+{  fprintf(yyout, "Un real: %s \n", yytext, atof( yytext ) );}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
