@@ -1,12 +1,12 @@
 [Editor_0]
-CursorCol=65
+CursorCol=7
 CursorRow=20
 TopLine=1
 LeftChar=1
 [Editor_1]
-CursorCol=1
-CursorRow=8
-TopLine=1
+CursorCol=20
+CursorRow=65
+TopLine=37
 LeftChar=1
 [Editors]
 Order=0
