@@ -43,23 +43,23 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 "Para"|"Mientras"|"Fin Mientras"|"Fin Para"|"Hasta Que"|"Desde"|"Repetir" {  printf( "Una palabra reservada para ciclos: %s\n", yytext );}
 
+"And"|"and"|"Or"|"or"|"Not"|"not"  { printf( "Un operador logico: %s\n", yytext ); }
+
 {ID}       { printf( "Un identificador: %s\n", yytext ); }
 
-"+"|"-"|"*"|"/"|"//"|"**"|"%"  { printf( "Un operador: %s\n", yytext ); }
+"+"|"-"|"*"|"/"|"//"|"**"|"%"  { printf( "Un operador : %s\n", yytext ); }
 
-"=="|"!="|"<"|">"|"<="|">=" { printf( "Una asignacion: %s\n", yytext ); }
+"=="|"!="|"<"|">"|"<="|">=" { printf( "Una asignacion : %s\n", yytext ); }
 
-"#" { printf( "Un comentario %s\n", yytext ); }
+"#" { printf( "Un comentario : %s\n", yytext ); }
 
 "("|")"|"["|"]"|"{"|","|":"|"."|"`"|"="|";"|"+="|"-="|"*="|"/="|"//="|"%="|"&="|"^="|">>="|"<<="|"**="   { printf( "Es un delimitador de programa %s\n", yytext ); }
 
-";" { printf( "Un separador: %s\n", yytext ); }
+";" { printf( "Un separador : %s\n", yytext ); }
 
-"#" { printf( "Un comentario %s\n", yytext ); }
+"/*"|"*/" { printf( "Inicia un comentario : %s\n", yytext ); }
 
-"/*"|"*/" { printf( "Inicia un comentario %s\n", yytext ); }
-
-"*/" { printf( "Termina un comentario %s\n", yytext ); }
+"*/" { printf( "Termina un comentario : %s\n", yytext ); }
 
 "{"[^}\n]*"}"     /* se come una linea de comentarios */
 
@@ -71,7 +71,7 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 main( )
     {
-    printf(" Analizador para algunos elementos de un lenguaje al estilo de Piton en castellano\n");
+    printf("Analizador para algunos elementos de un lenguaje al estilo de Piton en castellano\n\n");
     yyin = fopen( "prog.pas", "r" );
     yylex();
     printf("Presiones una tecla para terminar...");
