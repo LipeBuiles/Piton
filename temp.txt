@@ -1,7 +1,6 @@
-Es un delimitador de programa {
-Es un delimitador de programa }
-Es un delimitador de programa [
-Es un delimitador de programa [
-Es un delimitador de programa ]
-Es un delimitador de programa ]
-Un identificador: JUAN_DK46
+Un identificador: JIS
+Un identificador: HDKHD
+Un identificador: HHDO
+Caracter no reconocido: ?
+Un identificador: DKNKD_
+Caracter no reconocido: &

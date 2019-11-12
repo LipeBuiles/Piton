@@ -65,7 +65,7 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 [ \t\n]+          /* se come los espacios en blanco */
 
-.                 { fprintf(yyout,  "Caracter no reconocido: %s\n", yytext ); }
+.                 { fprintf(yyout,  "Caracter no reconocido: %s\n", yytext, yylineno ); contError++;}
 
 %%
 

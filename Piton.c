@@ -946,7 +946,7 @@ YY_RULE_SETUP
 case 26:
 YY_RULE_SETUP
 #line 68 "C:\\Projects\\Piton\\Piton.l"
-{ fprintf(yyout,  "Caracter no reconocido: %s\n", yytext ); }
+{ fprintf(yyout,  "Caracter no reconocido: %s\n", yytext, yylineno ); contError++;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
