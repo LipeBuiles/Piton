@@ -1,4 +1,0 @@
-Un entero: 10 
-Un entero: -5 
-Un real: 1,1 
-Un real: -2,0 

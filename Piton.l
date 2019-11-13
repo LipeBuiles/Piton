@@ -43,7 +43,7 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 "Para"|"Mientras"|"Fin Mientras"|"Fin Para"|"Hasta Que"|"Desde"|"Repetir" {  fprintf(yyout, "Una palabra reservada para ciclos: %s\n", yytext );}
 
-"And"|"and"|"Or"|"or"|"Not"|"not"  { fprintf(yyout, "Un operador logico: %s\n", yytext ); }
+"Y"|"y"|"O"|"o"|"No"|"no"  { fprintf(yyout, "Un operador logico: %s\n", yytext ); }
 
 {ID}       { fprintf(yyout, "Un identificador: %s\n", yytext ); }
 
@@ -57,7 +57,7 @@ ID       [a-zA-Z]({LETRAS}|{DIGITO}|"_")*
 
 ";" { fprintf(yyout, "Un separador : %s\n", yytext ); }
 
-"/*"|"*/" { fprintf(yyout, "Inicia un comentario : %s\n", yytext ); }
+"/*" { fprintf(yyout, "Inicia un comentario : %s\n", yytext ); }
 
 "*/" { fprintf(yyout, "Termina un comentario : %s\n", yytext ); }
 
